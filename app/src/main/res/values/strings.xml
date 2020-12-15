@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">篮球计分</string>
+
+    <string name="add1" translatable="false">+1</string>
+    <string name="add2" translatable="false">+2</string>
+    <string name="add3" translatable="false">+3</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="a">A 队</string>
+    <string name="undo">撤销</string>
+    <string name="reset">重置</string>
+    <string name="b">B 队</string>
+</resources>
