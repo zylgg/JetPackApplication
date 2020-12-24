@@ -58,7 +58,9 @@ public class MainFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
+        //声明，MainViewModel ：
         mViewModel = AndroidViewModelFactory.getInstance(this.getActivity().getApplication()).create(MainViewModel.class);
+
         binding= DataBindingUtil.bind(view);
         binding.setVmodel(mViewModel);
         binding.setLifecycleOwner(this);
@@ -69,8 +71,7 @@ public class MainFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        // TODO: Use the ViewModel
-        //观察LiveData对象
+        //使用MainViewModel
         mViewModel.get_AddNum_MutableLiveData().observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
